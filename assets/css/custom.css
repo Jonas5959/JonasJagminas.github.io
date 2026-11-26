@@ -228,7 +228,7 @@ a.button:hover {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
-  padding: 0.45rem 0.9rem;
+  padding: 0.3rem 0.5rem;
   box-shadow: 0 10px 25px rgba(2, 6, 23, 0.22);
 }
 
@@ -237,7 +237,7 @@ a.button:hover {
 .navmenu a {
   border-bottom: none;
   border-radius: 10px;
-  padding: 0.45rem 0.85rem;
+  padding: 0.35rem 0.5rem;
 }
 
 #header .navmenu a:hover,
@@ -302,7 +302,7 @@ button:focus-visible,
 }
 
 /* Kad tekstas nepersipildytų ir neprarastų skaitomumo siauruose ekranuose */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   #about,
   #resume,
   #portfolio,
@@ -444,4 +444,361 @@ ul ol > li::before {
   font-size: 0.9rem;
   font-weight: 700;
   color: #c2410c;
+}
+/* 2. Lentelės stiliai */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+}
+
+/* 2a. Antraštinė eilutė */
+thead th,
+tr:first-child th {
+  background-color: #0f4c81;
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: 3px solid #c2410c;
+}
+
+/* 2c. Vienodi langelių vidiniai tarpai ir lygiavimas centre */
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #cbd5e1;
+}
+
+/* 2b. „Zebra“ eilutės ir :hover efektas */
+tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tbody tr:hover {
+  background-color: #e2e8f0;
+}
+/* Modulio skilties atitraukimas nuo šoninio meniu */
+#module.module {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  #module.module {
+    padding-left: 110px;
+    padding-right: 2.5rem;
+  }
+}
+
+/* XP, lygio ir rango srities stiliai */
+#module .xp-status-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#module .xp-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.1rem 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-top: 4px solid #0f4c81;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+#module .xp-stat-level {
+  border-top-color: #c2410c;
+}
+
+#module .xp-stat-rank {
+  border-top-color: #0f766e;
+}
+
+#module .xp-stat-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+#module .xp-stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+#module .xp-stat-meta {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Skill Kanban lenta */
+#module .skill-kanban-wrapper {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+#module .skill-kanban-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+}
+
+#module .skill-kanban-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+#module .kanban-column {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+#module .kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+#module .kanban-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  border: 1px solid #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+#module .kanban-planned { border-top: 4px solid #64748b; }
+#module .kanban-learning { border-top: 4px solid #c2410c; }
+#module .kanban-done { border-top: 4px solid #0f4c81; }
+
+#module .skill-card {
+  background-color: #ffffff;
+  border: 1px solid #dbe4ee;
+  border-radius: 12px;
+  padding: 0.95rem 1rem;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+#module .skill-card:last-child {
+  margin-bottom: 0;
+}
+
+#module .skill-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
+#module .skill-status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+#module .status-planned { background-color: #e2e8f0; color: #334155; }
+#module .status-learning { background-color: #ffedd5; color: #9a3412; }
+#module .status-done { background-color: #dbeafe; color: #0f4c81; }
+
+#module .skill-xp {
+  font-size: 0.85rem;
+  font-weight: 700;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 0.15rem 0.55rem;
+  border-radius: 8px;
+}
+
+#module .skill-title {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  #module .xp-status-panel,
+  #module .skill-kanban-board {
+    grid-template-columns: 1fr;
+  }
+}
+/* 4. Patirties taškų progreso juostos stiliai */
+#module .xp-progress-block {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+#module .xp-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+#module .xp-progress-title {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #475569;
+  margin-bottom: 0.2rem;
+}
+
+#module .xp-progress-subtitle {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+#module .xp-progress-percent {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f4c81;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Likusi dalis (takelis) */
+#module .xp-progress-track {
+  width: 100%;
+  height: 18px;
+  background-color: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Užpildyta dalis */
+#module .xp-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0f4c81 0%, #0f766e 100%);
+  border-radius: 999px 0 0 999px;
+  transition: width 0.35s ease;
+}
+
+#module .xp-progress-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+/* 5. Vartotojo įgūdžių pažangos statistikos srities stiliai */
+#module .skill-stats-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#module .skill-stat-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.3rem;
+  padding: 1rem 1.2rem;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #0f4c81;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+#module .skill-stat-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #475569;
+}
+
+#module .skill-stat-value {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+#module .skill-stat-note {
+  font-size: 0.84rem;
+  color: #64748b;
+}
+
+/* 6. Bendras suderinamumas, išdėstymas ir apsauga nuo persidengimo */
+#module.module {
+  position: relative;
+  overflow-x: clip;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  #module.module {
+    padding-left: 110px;
+    padding-right: 2.5rem;
+  }
+}
+
+#module .skill-kanban-wrapper,
+#module .skill-kanban-board,
+#module .xp-status-panel,
+#module .xp-progress-block,
+#module .skill-stats-panel {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+#module .skill-card,
+#module .xp-stat-card,
+#module .skill-stat-item,
+#module .xp-progress-block {
+  min-width: 0;
+}
+
+@media (max-width: 991px) {
+  #module .skill-stats-panel,
+  #module .xp-status-panel,
+  #module .skill-kanban-board {
+    grid-template-columns: 1fr;
+  }
 }
